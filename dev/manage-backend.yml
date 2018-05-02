@@ -10,7 +10,7 @@ spring:
     username: root
     password: root
   rabbitmq:
-    host: local.rabbitmq.com
+    host: localhost
     port: 5672
     username: cloud-dev
     password: cloud-dev

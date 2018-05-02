@@ -6,7 +6,7 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloud_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://localhost:8067/SCHOOL_SAFE?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     username: root
     password: root
   rabbitmq:
@@ -15,6 +15,9 @@ spring:
     username: cloud-dev
     password: cloud-dev
     virtual-host: /
+  redis:
+    host: localhost
+    port: 6379
   mvc:
     servlet:
       load-on-startup: 1
@@ -30,3 +33,12 @@ security:
     resource:
       user-info-uri: http://localhost:8080/api-o/user-me
       prefer-token-info: false
+wechat:
+  domain: http://api.gateway.com:8080/api-u
+  infos:
+    app1:
+      appid: xxx
+      secret: xxx
+    app2:
+      appid: xxx
+      secret: xxx
